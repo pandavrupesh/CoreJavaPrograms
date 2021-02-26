@@ -1,0 +1,27 @@
+package com.coredemo;
+
+import java.util.Scanner;
+
+public class ArmstrongNumber {
+	public static void main(String args[]) { 
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter Number");
+		int num=sc.nextInt();
+	    armstrong(num);
+	}
+	
+	 public static void armstrong(int num){
+	      int rem,sum=0; 
+	      int orgnum =num;
+	      while(num>0){
+	          rem =num%10;
+	          num=num/10;
+	          sum=sum+rem*rem*rem;
+	      }
+	      if(orgnum==sum)
+	          System.out.println(orgnum +" is armstrong number ");
+	      
+	      else
+	      System.out.println(sum +" is not armstrong number");
+	  }
+}
