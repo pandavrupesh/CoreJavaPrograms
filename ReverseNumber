@@ -1,0 +1,23 @@
+package com.coredemo;
+
+import java.util.Scanner;
+
+public class ReverseNumber {
+	
+	public static void main(String [] arg) {
+		Scanner sc =new Scanner(System.in);
+		System.out.println("Enter Number");
+		int num =sc.nextInt();
+		reverseNo(num);
+	}
+
+	private static void reverseNo(int num) {
+		int rem,rNo=0;
+		while(num!=0) {
+			rem=num%10;
+			num=num/10;
+			rNo=rNo*10+rem;
+		}
+		System.out.println("reverse Number is "+rNo);
+	}
+}
